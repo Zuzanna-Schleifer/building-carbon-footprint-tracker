@@ -1,0 +1,26 @@
+# Python
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+.env
+
+# Dane - za duze na GitHub
+data/raw/
+data/processed/
+*.parquet
+
+# Outputs
+outputs/charts/*.html
+
+# Node / React
+node_modules/
+dist/
+
+# VS Code
+.vscode/
+
+# System
+.DS_Store
+Thumbs.db
+desktop.ini

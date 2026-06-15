@@ -1,0 +1,283 @@
+@import url('https://fonts.googleapis.com/css2?family=Source+Serif+4:opsz,wght@8..60,400;8..60,500;8..60,600&family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans:wght@400;500;600&display=swap');
+
+:root {
+  --paper:      #F4F1EA;
+  --paper-deep: #EBE6DA;
+  --ink:        #2C2C2A;
+  --ink-soft:   #5F5E5A;
+  --ink-faint:  #B4B2A9;
+  --line:       #D3D1C7;
+
+  --scope1:     #0F6E56;
+  --scope1-bg:  #E1F5EE;
+  --scope2-loc: #BA7517;
+  --scope2-loc-bg: #FAEEDA;
+  --scope2-mkt: #3B6D11;
+  --scope2-mkt-bg: #EAF3DE;
+  --scope3:     #993C1D;
+  --scope3-bg:  #FAECE7;
+  --target:     #534AB7;
+
+  --font-serif: 'Source Serif 4', Georgia, serif;
+  --font-sans:  'IBM Plex Sans', -apple-system, sans-serif;
+  --font-mono:  'IBM Plex Mono', monospace;
+}
+
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+body {
+  background: var(--paper);
+  color: var(--ink);
+  font-family: var(--font-sans);
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+}
+
+.app { max-width: 760px; margin: 0 auto; padding: 0 24px 80px; }
+
+/* ── Header / ledger hero ──────────────────────────────────── */
+.ledger-header {
+  padding: 56px 0 40px;
+  border-bottom: 1px solid var(--line);
+}
+
+.ledger-eyebrow {
+  font-family: var(--font-mono);
+  font-size: 12px;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--ink-soft);
+  margin-bottom: 16px;
+}
+
+.ledger-title {
+  font-family: var(--font-serif);
+  font-size: 32px;
+  font-weight: 500;
+  letter-spacing: -0.01em;
+  margin-bottom: 8px;
+}
+
+.ledger-sub {
+  font-size: 15px;
+  color: var(--ink-soft);
+  max-width: 640px;
+}
+
+.ledger-totals {
+  display: grid;
+  grid-template-columns: 1.4fr 1fr 1fr;
+  gap: 32px;
+  margin-top: 40px;
+  align-items: end;
+}
+
+.ledger-total-main .ledger-num {
+  font-family: var(--font-serif);
+  font-size: 52px;
+  font-weight: 500;
+  line-height: 1;
+  letter-spacing: -0.02em;
+}
+
+.ledger-total-main .ledger-unit {
+  font-family: var(--font-mono);
+  font-size: 14px;
+  color: var(--ink-soft);
+  margin-left: 8px;
+}
+
+.ledger-stat-label {
+  font-family: var(--font-mono);
+  font-size: 11px;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--ink-soft);
+  margin-bottom: 6px;
+}
+
+.ledger-stat-value {
+  font-family: var(--font-serif);
+  font-size: 28px;
+  font-weight: 500;
+}
+
+.ledger-stat-value.up { color: var(--scope3); }
+.ledger-stat-value.down { color: var(--scope2-mkt); }
+
+/* ── Sections ───────────────────────────────────────────────── */
+.section { padding: 48px 0; border-bottom: 1px solid var(--line); }
+.section:last-child { border-bottom: none; }
+
+.section-head {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  margin-bottom: 24px;
+  gap: 16px;
+  flex-wrap: wrap;
+}
+
+.section-title {
+  font-family: var(--font-serif);
+  font-size: 24px;
+  font-weight: 500;
+}
+
+.section-meta {
+  font-family: var(--font-mono);
+  font-size: 12px;
+  color: var(--ink-soft);
+  text-align: right;
+}
+
+.section-desc {
+  font-size: 14px;
+  color: var(--ink-soft);
+  max-width: 640px;
+  margin-bottom: 28px;
+}
+
+/* ── Scope legend chips ────────────────────────────────────── */
+.legend-row {
+  display: flex;
+  gap: 16px;
+  flex-wrap: wrap;
+  margin-bottom: 24px;
+  font-family: var(--font-mono);
+  font-size: 12px;
+}
+
+.legend-chip {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  color: var(--ink-soft);
+}
+
+.legend-dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 2px;
+  flex-shrink: 0;
+}
+
+/* ── KPI grid ───────────────────────────────────────────────── */
+.kpi-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 1px;
+  background: var(--line);
+  border: 1px solid var(--line);
+}
+
+.kpi-cell {
+  background: var(--paper);
+  padding: 20px;
+}
+
+.kpi-cell-label {
+  font-family: var(--font-mono);
+  font-size: 11px;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--ink-soft);
+  margin-bottom: 8px;
+}
+
+.kpi-cell-value {
+  font-family: var(--font-serif);
+  font-size: 26px;
+  font-weight: 500;
+  line-height: 1.1;
+}
+
+.kpi-cell-note {
+  font-size: 12px;
+  color: var(--ink-soft);
+  margin-top: 6px;
+}
+
+/* ── Chart containers ──────────────────────────────────────── */
+.chart-box {
+  background: var(--paper);
+}
+
+.chart-note {
+  font-size: 12px;
+  color: var(--ink-soft);
+  margin-top: 12px;
+  font-family: var(--font-mono);
+}
+
+/* ── Table ──────────────────────────────────────────────────── */
+.ef-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 13px;
+}
+
+.ef-table th {
+  text-align: left;
+  font-family: var(--font-mono);
+  font-size: 11px;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--ink-soft);
+  padding: 10px 12px;
+  border-bottom: 1px solid var(--ink);
+}
+
+.ef-table td {
+  padding: 10px 12px;
+  border-bottom: 1px solid var(--line);
+}
+
+.ef-table tr:last-child td { border-bottom: none; }
+
+.ef-table .num { font-family: var(--font-mono); text-align: right; }
+
+.scope-tag {
+  display: inline-block;
+  font-family: var(--font-mono);
+  font-size: 11px;
+  padding: 2px 8px;
+  border-radius: 4px;
+}
+
+.scope-tag.s1 { background: var(--scope1-bg); color: var(--scope1); }
+.scope-tag.s2 { background: var(--scope2-loc-bg); color: var(--scope2-loc); }
+.scope-tag.s3 { background: var(--scope3-bg); color: var(--scope3); }
+
+/* ── Footer ─────────────────────────────────────────────────── */
+.footer {
+  padding-top: 40px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+.footer-text {
+  font-size: 13px;
+  color: var(--ink-soft);
+}
+
+.footer-link {
+  font-family: var(--font-mono);
+  font-size: 13px;
+  color: var(--ink);
+  text-decoration: none;
+  border-bottom: 1px solid var(--ink);
+}
+
+.footer-link:hover { color: var(--scope1); border-color: var(--scope1); }
+
+/* ── Responsive ─────────────────────────────────────────────── */
+@media (max-width: 720px) {
+  .ledger-title { font-size: 28px; }
+  .ledger-total-main .ledger-num { font-size: 44px; }
+  .ledger-totals { grid-template-columns: 1fr; gap: 20px; }
+  .section-title { font-size: 20px; }
+}

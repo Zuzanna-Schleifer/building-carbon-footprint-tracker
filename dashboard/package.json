@@ -1,0 +1,26 @@
+{
+  "name": "carbon-footprint-tracker-dashboard",
+  "version": "1.0.0",
+  "description": "CSRD Carbon Footprint Dashboard — Scope 1+2+3 emissions, GHG Protocol, SBTi tracking · Zuzanna Schleifer",
+  "author": "Zuzanna Schleifer <zu.schleifer@gmail.com>",
+  "homepage": "https://github.com/Zuzanna-Schleifer/carbon-footprint-tracker",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "tsc && vite build",
+    "preview": "vite preview"
+  },
+  "dependencies": {
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "recharts": "^2.10.0"
+  },
+  "devDependencies": {
+    "@types/react": "^18.2.0",
+    "@types/react-dom": "^18.2.0",
+    "@vitejs/plugin-react": "^4.2.0",
+    "typescript": "^5.2.0",
+    "vite": "^5.0.0"
+  }
+}
