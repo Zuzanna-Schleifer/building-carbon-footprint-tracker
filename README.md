@@ -1,5 +1,6 @@
 # Carbon Footprint Tracker — Real Estate Portfolio CSRD Reporting
 
+**[Live demo →](https://building-carbon-footprint-tracker.vercel.app/)**
 Automated Scope 1+2+3 emissions calculation, GHG Protocol-compliant methodology, and CSRD-ready Excel report generation for a 50-building commercial real estate portfolio.
 
 ---
